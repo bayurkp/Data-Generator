@@ -84,4 +84,11 @@ class Customized
         $randomSuffix = ["Paper", "Wood", "Print", "Family", "Ink"];
         return $randomPrefix[rand(0, count($randomPrefix) - 1)] . ". $name " . $randomSuffix[rand(0, count($randomSuffix) - 1)];
     }
+
+    public static function generateBookshopName()
+    {
+        $name = explode(" ", self::generateName())[1];
+        $randomSuffix = ["Books", "Read", "Library", "Written"];
+        return "$name " . $randomSuffix[rand(0, count($randomSuffix) - 1)];
+    }
 }
